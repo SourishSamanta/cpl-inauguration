@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden;
+  font-family: "Courier New", monospace;
+}
+/* 🎀 RIBBON FULL STYLE BACK */
+
+#ribbon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100vw;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 999;
+}
+
+.bow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 100px;
+  background-image: url('https://pics.clipartpng.com/midle/Beautiful_Red_Bow_PNG_Clipart-518.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+
+.bow.cut {
+  animation: bowFly 1s forwards;
+}
+
+.ribbon--l,
+.ribbon--r {
+  position: absolute;
+  width: 50vw;
+  height: 16px;
+  background: linear-gradient(-90deg, #c4003a, #ff1744);
+  box-shadow: 0 0 10px rgba(255, 0, 80, 0.6);
+}
+
+.ribbon--l {
+  left: 0;
+  background: linear-gradient(90deg, #c4003a, #ff1744);
+}
+
+.ribbon--r {
+  right: 0;
+}
+
+.ribbon--l.cut {
+  animation: cutLeft 2s forwards;
+}
+
+.ribbon--r.cut {
+  animation: cutRight 2s forwards;
+}
+
+/* ✂️ CUT ANIMATIONS */
+
+@keyframes cutLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-3000px); opacity: 0; }
+}
+
+@keyframes cutRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(3000px); opacity: 0; }
+}
+
+@keyframes bowFly {
+  0% { transform: translate(-50%, -50%); }
+  100% { transform: translate(-50%, -800%); opacity: 0; }
+}
