@@ -12,7 +12,7 @@ body {
   left: 0;
   width: 100vw;
   transform: translateY(-50%);
-  cursor: pointer;
+  
   z-index: 999;
 }
 
@@ -72,6 +72,17 @@ body {
 }
 
 @keyframes bowFly {
-  0% { transform: translate(-50%, -50%); }
-  100% { transform: translate(-50%, -800%); opacity: 0; }
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  40% {
+    transform: translate(-50%, -120%) scale(1.2) rotate(30deg);
+  }
+  70% {
+    transform: translate(-50%, -300%) scale(0.9) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -800%) scale(0.7) rotate(360deg);
+    opacity: 0;
+  }
 }
