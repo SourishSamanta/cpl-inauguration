@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { HiScissors } from "react-icons/hi2";
+import { HiScissors, HiSpeakerWave, HiSpeakerXMark } from "react-icons/hi2";
 
 const bootSequence = [
     ">>> INITIALIZING CODING PREMIER LEAGUE 2026",
@@ -91,12 +91,34 @@ export default function App() {
             setLines((prev) => [
                 ...prev,
                 "",
-                ">>> ACCESS GRANTED: ADMIN DETECTED",
+                ">>> ACCESS GRANTED: Welcome Prof. Sajal Saha",
+                
+            ]);
+
+            
+        }, 1200);
+
+        setTimeout(() => {
+            setLines((prev) => [
+                ...prev,
+                "",
+                ">>> ACCESS GRANTED: Welcome Prof. Radha Tamal Goshwami",
+                
+            ]);
+
+            
+        }, 1400);
+
+        setTimeout(() => {
+            setLines((prev) => [
+                ...prev,
+                "",
+                ">>> ACCESS GRANTED: Welcome Prof. Avijit Giri",
                 ">>> DEPLOYING TO ALL TERMINALS...",
             ]);
 
             startLoading();
-        }, 1200);
+        }, 1600);
     };
 
     /* ⚙️ Loading */
@@ -153,7 +175,7 @@ export default function App() {
                     }}
                     style={styles.soundBtn}
                 >
-                    {muted ? "🔇" : "🔊"}
+                    {muted ? <HiSpeakerXMark /> : <HiSpeakerWave />}
                 </button>
             )}
 
@@ -389,7 +411,7 @@ const styles = {
         fontSize: "24px",
         background: "black",
         color: "#00ff9f",
-        border: "1px solid #00ff9f",
+        
         padding: "8px 12px",
         cursor: "pointer",
     },
