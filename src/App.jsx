@@ -113,12 +113,12 @@ export default function App() {
             setLines((prev) => [
                 ...prev,
                 "",
-                ">>> ACCESS GRANTED: Welcome Prof. Avijit Giri",
+                ">>> Welcoming Teams...",
                 ">>> DEPLOYING TO ALL TERMINALS...",
             ]);
 
             startLoading();
-        }, 1600);
+        }, 1700);
     };
 
     /* ⚙️ Loading */
